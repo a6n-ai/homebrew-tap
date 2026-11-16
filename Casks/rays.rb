@@ -1,6 +1,6 @@
 cask "rays" do
-  version "0.1.0"
-  sha256 "d0cf6d6bcbb478024510612fcace0c10cdd5919ff70f871406f7fe1f5b2fcd6d"
+  version "0.1.1"
+  sha256 "155d73a6dd85ab425836a666223eed931e814bc060b76db8af2e35517bd8c673"
 
   url "https://github.com/a6n-ai/rays/releases/download/v#{version}/Rays-#{version}.zip"
   name "Rays"
