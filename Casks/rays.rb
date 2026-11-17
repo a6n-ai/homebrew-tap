@@ -21,10 +21,11 @@ cask "rays" do
     system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Rays.app"]
   end
 
-  # Stop sorter agents that run Rays' bundled sorter; agents from other copies are left alone.
+  # Stop sorter agents that run the installed Rays' sorter; agents from other copies are left alone.
   uninstall_preflight do
     Dir.glob(File.expand_path("~/Library/LaunchAgents/local.sorter*.plist")).each do |plist|
-      next unless File.read(plist).include?("Rays.app")
+      # Only agents that run this cask's copy; a Rays built elsewhere keeps its agents.
+      next unless File.read(plist).include?("#{appdir}/Rays.app/")
 
       system_command "/bin/launchctl", args: ["bootout", "gui/#{Process.uid}", plist], must_succeed: false
       File.delete(plist)
