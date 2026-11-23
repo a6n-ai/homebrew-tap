@@ -2,7 +2,9 @@ cask "rays" do
   version "0.1.16"
   sha256 "824b71c38ee169fce5e4fca7004fb2164440c15686dbcc04815a3a8d064b303c"
 
-  url "https://github.com/a6n-ai/rays/releases/download/v#{version}/Rays-#{version}.zip"
+  # Through rays.a6n.ai, which counts the download and redirects to the GitHub release.
+  url "https://rays.a6n.ai/download/Rays-#{version}.zip?src=brew",
+      verified: "rays.a6n.ai/download/"
   name "Rays"
   desc "Small download manager with on-device AI sorting"
   homepage "https://github.com/a6n-ai/rays"
