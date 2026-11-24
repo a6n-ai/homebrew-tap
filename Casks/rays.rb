@@ -1,6 +1,6 @@
 cask "rays" do
-  version "0.1.18"
-  sha256 "160f6df3d8fe1ff711606d48d08d0b8ad8aaacdb6dec64b405027ffdd0c92758"
+  version "0.1.19"
+  sha256 "fe2d7578544e2a2e82a240d6a4d38312aced02475c350a15322ad61a602c2a8c"
 
   # Through rays.a6n.ai, which counts the download and redirects to the GitHub release.
   url "https://rays.a6n.ai/download/Rays-#{version}.zip?src=brew"
